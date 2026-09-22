@@ -1,0 +1,49 @@
+timezone: "Asia/Seoul"
+
+seller:
+  target_price_krw: 468000000
+  move_in: "2027-02"
+  sale_window: ["2026-10-01", "2026-11-30"]
+
+search:
+  trade_type: "A1"
+  real_estate_type: "APT"
+  preferred_min_floor: 10
+  area_min_m2: 80
+  area_max_m2: 90
+  lower_floor_fallback: true
+
+complexes:
+  - name: "지제역반도체밸리해링턴플레이스"
+    aliases: ["평택 가재지구 효성해링턴플레이스", "효성해링턴플레이스", "지제역반도체밸리해링턴"]
+    type: "primary"
+    preferred_buildings: [301, 302, 303, 304, 305]
+    target_building: 304
+
+  - name: "지제역반도체밸리쌍용더플래티넘"
+    aliases: ["쌍용더플래티넘", "지제역반도체밸리쌍용"]
+    type: "competitor"
+
+  - name: "지제역반도체밸리제일풍경채(2BL)"
+    aliases: ["제일풍경채", "지제역반도체밸리풍경채", "가재지구 풍경채"]
+    type: "competitor"
+
+  - name: "지제역더샵센트럴시티"
+    aliases: ["지제역더샵"]
+    type: "substitute"
+    complex_id: "127382"
+
+  - name: "e편한세상지제역"
+    aliases: ["e편한세상 지제역"]
+    type: "substitute"
+    complex_id: "134315"
+
+comparison:
+  price_change_threshold_krw: 1000000
+  direct_competitor_below_target_threshold_krw: 5000000
+
+output:
+  current: "data/current.json"
+  previous: "data/previous.json"
+  changes: "data/changes.json"
+  raw: "data/raw.json"
