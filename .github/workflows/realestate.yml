@@ -1,0 +1,36 @@
+name: Pyeongtaek Real Estate Monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 23 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Crawl
+        run: python crawler.py
+
+      - name: Compare
+        run: python compare.py
+
+      - name: Commit data
+        run: |
+          git config user.name "realestate-bot"
+          git config user.email "realestate-bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Daily listing update"
+          git push
