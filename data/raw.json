@@ -1,22 +1,22 @@
 {
   "지제역반도체밸리해링턴플레이스": {
     "complex_id": "171337",
-    "error": "429 Too Many Requests after 5 retries"
+    "error": "HTTPSConnectionPool(host='new.land.naver.com', port=443): Read timed out. (read timeout=20)"
   },
   "지제역반도체밸리쌍용더플래티넘": {
-    "complex_id": "168477",
-    "error": "429 Too Many Requests after 5 retries"
+    "complex_id": "20832189",
+    "error": "HTTPSConnectionPool(host='new.land.naver.com', port=443): Read timed out. (read timeout=20)"
   },
   "지제역반도체밸리제일풍경채(2BL)": {
     "complex_id": "113510",
-    "error": "429 Too Many Requests after 5 retries"
+    "error": "HTTPSConnectionPool(host='new.land.naver.com', port=443): Read timed out. (read timeout=20)"
   },
   "지제역더샵센트럴시티": {
     "complex_id": "127382",
-    "error": "429 Too Many Requests after 5 retries"
+    "error": "HTTPSConnectionPool(host='new.land.naver.com', port=443): Read timed out. (read timeout=20)"
   },
   "e편한세상지제역": {
     "complex_id": "134315",
-    "error": "429 Too Many Requests after 5 retries"
+    "error": "HTTPSConnectionPool(host='new.land.naver.com', port=443): Read timed out. (read timeout=20)"
   }
 }
